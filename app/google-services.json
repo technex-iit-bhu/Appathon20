@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "989523947119",
+    "firebase_url": "https://dapp-eef60.firebaseio.com",
+    "project_id": "dapp-eef60",
+    "storage_bucket": "dapp-eef60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989523947119:android:47b02007b5c29528d9a79a",
+        "android_client_info": {
+          "package_name": "com.dapp.dapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "989523947119-rsn3kqbaajcfdm8vdrpieftqhu3lo6ob.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dapp.dapp",
+            "certificate_hash": "fa3eadde8cef6b4abf04930592ad730097334000"
+          }
+        },
+        {
+          "client_id": "989523947119-e5liq4p9dll4eod4v413rrb6t0b14j0l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0Jl2v8__PFGKnhhwldXfnJWZGfEmrdh8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "989523947119-e5liq4p9dll4eod4v413rrb6t0b14j0l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
