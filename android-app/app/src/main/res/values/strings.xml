@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">VR Shop</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="toggle_camera">Toggle Camera</string>
+    <string name="detect_object">Detect Object</string>
+    <string name="descript">Note :- Product Colour May Slightly Vary Due to Photographic Lighting Sources or Your Monitor SettingsComfy and Comfirtable Material Used
+        Gubatti a complete range of footwear for the indian male categorized as work-classic</string>
+</resources>
