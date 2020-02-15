@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "671335965877",
+    "firebase_url": "https://codefest18-9abc9.firebaseio.com",
+    "project_id": "codefest18-9abc9",
+    "storage_bucket": "codefest18-9abc9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671335965877:android:598f8e9ceae2c2e9",
+        "android_client_info": {
+          "package_name": "codefest.vrshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671335965877-vjk234ovfp02q17d12vph4vocpccasju.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "codefest.vrshop",
+            "certificate_hash": "0cc82f0946a2708dece98f04ab80766395898fa7"
+          }
+        },
+        {
+          "client_id": "671335965877-ok27sd3sgq1ps36et73dp1sfuejr4au6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDi2ATpJ13pkja7BLcfjrIPN6LlkxNMndU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "671335965877-ok27sd3sgq1ps36et73dp1sfuejr4au6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
