@@ -1,0 +1,111 @@
+.why_pyblink
+{
+    text-align: center;
+    padding-bottom:70px;
+    overflow:hidden;
+    padding:10px;
+}
+.why_pyblink_container
+{
+    display: flex;
+    flex-direction: column;
+}
+.why_pyblink_illustration_container
+{
+    margin-top: 50px;
+    margin-bottom:0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.illustration_right
+{
+    margin-left: 90px;
+    margin-right: 90px;
+    width: 400px;
+    height: auto;
+    text-align: left;
+    display:flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom:70px;
+}
+.illustration_left
+{
+    margin-left: 90px;
+    margin-right: 90px;
+    width: 400px;
+    height: auto;
+    text-align: left;
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:70px;
+}
+.why_pyblink_heading
+{
+    font-family:'Source Serif Pro', serif;
+    font-weight: 500;
+    color:#183185;
+    font-size:40px;
+}
+.illustration_heading
+{
+    font-family:'Source Serif Pro', serif;
+    font-weight: 500;
+    margin: 0px;
+    color:#4342D2;
+}
+.illustration_para
+{
+    font-family:'Source Serif Pro', serif;
+    font-weight: 500;
+    margin:0px;
+}
+.desc_right
+{
+    background:#F0F0FE;
+    border-left:4px solid #4342D2;
+    align-content: center;
+    align-items: center;
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right:30px;
+}
+.desc_left
+{
+    background:#F0F0FE;
+    border-right:4px solid #4342D2;
+    align-content: center;
+    align-items: center;
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-right:30px;
+    padding-left:30px;
+}
+.wrap_reverse
+{
+    flex-wrap: wrap-reverse;
+}
+@media(max-width:555px)
+{
+    .illustration_left
+    {
+        margin-left:0px;
+        margin-right:0px;
+        width: 100vw;
+    }
+    .illustration_right
+    {
+        margin-left:0px;
+        margin-right:0px;
+        width: 100vw;
+    }
+}

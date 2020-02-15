@@ -1,0 +1,114 @@
+
+.feature_card
+{
+    width: 350px;
+    height:  350px;
+    background-size: cover;
+    /* repeat:no-repeat; */
+    text-align: center;
+    border-radius: 0.4vw;
+    transition-property: background,height,width;
+    transition-duration: 0.5s;
+    display: flex;
+    align-content: center;
+    justify-content: baseline;
+    flex-direction: column;
+    box-shadow: 0.2vw 0.2vw 0.2vw 0.2vw #EEEEEE;
+    border-width: 0.1vw;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-right:1.5vw;
+    margin-bottom: 1.5vw;
+    position: relative;
+}
+.feature_heading
+{
+    margin: 0px;
+    font-size:21px;
+    color:rgba(255,255,255,1);
+    position: relative;
+    z-index: 1;
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 500;
+}
+.feature_para
+{
+    margin:0px;
+    font-size: 14px;
+    color:white;
+    visibility: hidden;
+    font-family: 'Source Serif Pro', serif;
+    font-weight:500;
+    margin-top: 20px;
+}
+.feature_card:hover
+{
+    box-shadow: 0vw 0vw 0vw 0vw #EEEEEE;
+    cursor: pointer;
+}
+.feature_card:hover .feature_heading
+{
+    visibility: visible;
+    position: static;
+}
+.feature_card:hover .feature_para
+{
+    visibility: visible;
+}
+.feature_card_back_div
+{
+    position: absolute;
+    left:0px;
+    width: 350px;
+    /* top:0px; */
+    bottom: 0px;
+    height:350px;
+    background: rgba(0,0,0,0.6);
+    transition-property: height,width,left;
+    transition-duration: 0.5s;
+}
+/* .feature_card:hover .feature_card_back_div
+{
+    width: 18.5vw;
+    height: 20.5vw;
+} */
+.feature_svg
+{
+    margin-top: 100px;
+    width: 65px;
+    height: 65px;
+    position: relative;
+    z-index: 1;
+}
+@media only screen and (max-width: 1680px)
+{
+    .feature_card
+    {
+        width: 300px;
+        height:  300px;
+    }
+    .feature_card_back_div
+    {
+        width: 300px;
+    }
+    .feature_para
+    {
+        font-size: 12px;
+    }
+    .feature_heading
+    {
+        font-size:19px;
+    }
+    .feature_svg
+    {
+        margin-top: 90px;
+        width: 55px;
+         height: 55px;
+    }
+}
+@media only screen and (max-width: 618px)
+{
+    
+}

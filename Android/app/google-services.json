@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "731054135099",
+    "firebase_url": "https://newagent-5a87d.firebaseio.com",
+    "project_id": "newagent-5a87d",
+    "storage_bucket": "newagent-5a87d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731054135099:android:882d5571cb2294cb3d891e",
+        "android_client_info": {
+          "package_name": "com.hackout2020.meagre"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "731054135099-jcbb74bjn81sho7bjab3bp9jfv2u5i12.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hackout2020.meagre",
+            "certificate_hash": "0b5f86b861b60113dd3a942cc7a12359e460490a"
+          }
+        },
+        {
+          "client_id": "731054135099-rtbvfe6kgli29u86b3honvh4arcdrvai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXvA0osfE5hHoAjU13GG9Rov27LfzdlQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "731054135099-rtbvfe6kgli29u86b3honvh4arcdrvai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

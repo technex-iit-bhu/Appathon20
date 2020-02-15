@@ -1,0 +1,16 @@
+#android project
+build/*
+*.iml
+tests/*.iml
+.gradle/
+.idea/
+local.properties
+tests/bin/*
+bin/*
+tests/gen/*
+gen/*
+tests/out/*
+out/*
+/openmrs-client/build
+/odkcollect/build
+*.DS_Store

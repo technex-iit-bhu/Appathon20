@@ -1,0 +1,24 @@
+.our_services_tab
+{
+    width: 100vw;
+    /* height: 25vw; */
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 2vw;
+    background: #FFFFFF;
+    /* padding-left: 12vw;
+    padding-right: 12vw; */
+    padding-top: 1vw;
+    overflow:hidden;
+    padding-bottom: 3vw;
+}
+/* @media only screen and (max-width: 618px)
+{
+    .our_services_tab
+    {
+        height: 1247px;
+    }
+} */
