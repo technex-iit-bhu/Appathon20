@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "605484856938",
+    "firebase_url": "https://iitsuraj-dashcash.firebaseio.com",
+    "project_id": "iitsuraj-dashcash",
+    "storage_bucket": "iitsuraj-dashcash.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605484856938:android:a3a2d751a00107e064bc13",
+        "android_client_info": {
+          "package_name": "com.dashcash.dashcash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "605484856938-52je0i0u7li0u9b3m0cqjnuho3dmi00j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5uh1CAW5YAcRsQLifiGohHR443L3Zsb0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "605484856938-52je0i0u7li0u9b3m0cqjnuho3dmi00j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
