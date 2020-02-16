@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MessManager</string>
+    <string name="app_desc">Prepare yourself for the ride</string>
+    <string name="sample_date">02/04/218</string>
+
+    <string-array name="examples1">
+        <item>Checking Net Connection</item>
+        <item>Connection is slow …</item>
+        <item>Check what is wrong</item>
+        <item>Network not coming? or</item>
+        <item>Signed in to IIT(BHU)?</item>
+
+
+    </string-array>
+</resources>

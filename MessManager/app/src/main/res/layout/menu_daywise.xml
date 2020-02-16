@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:paddingStart="8dp"
+    android:paddingLeft="8dp"
+    android:paddingEnd="5dp"
+    android:paddingRight="5dp"
+    android:weightSum="10">
+
+        <TextView
+            android:layout_width="31dp"
+            android:id="@+id/menu_day"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Sunday"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/abc_text_size_small_material" />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="24dp"
+            android:clickable="true"
+            android:id="@+id/card_breakfast"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:layout_weight="3"
+            app:cardBackgroundColor="@color/background_green"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="1dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/menu_breakfast"
+                android:layout_height="match_parent"
+
+                android:text="Kachauri (Dal/Aloo), Bournvita, Papita" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="24dp"
+            android:id="@+id/card_lunch"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_weight="3"
+            app:cardBackgroundColor="@color/background_green"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="1dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/menu_lunch"
+                android:layout_height="match_parent"
+
+                android:text="Masoor daal, Kadhi, Lauki, Kheera-rayta, papad, Neembu Paani" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="24dp"
+            android:id="@+id/card_dinner"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:layout_weight="3"
+            app:cardBackgroundColor="@color/background_green"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="1dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/menu_dinner"
+                android:text="Idli/vada, Lauki,soyabean, Sambhar, kesar-milk" />
+        </androidx.cardview.widget.CardView>
+
+</LinearLayout>
