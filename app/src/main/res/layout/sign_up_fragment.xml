@@ -8,6 +8,8 @@
     <EditText
         android:id="@+id/phone"
         android:layout_alignParentTop="true"
+        android:layout_margin="8dp"
+        android:hint="Enter Phone no"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="phone" />
@@ -17,7 +19,8 @@
         android:layout_alignParentEnd="true"
         android:text="SignUp"
         android:textAllCaps="false"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/phone"
+        android:layout_margin="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true" />

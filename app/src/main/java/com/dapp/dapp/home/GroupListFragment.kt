@@ -100,10 +100,10 @@ class GroupListFragment : Fragment() {
         val message: TextView = layoutInflater.findViewById(R.id.mesage)
         val from: TextView = layoutInflater.findViewById(R.id.from)
         val next: TextView = layoutInflater.findViewById(R.id.nextHash)
-        previous.setText("Previous hash : $previousStr")
-        next.setText("Current hash : $nextStr")
-        message.setText("Message : $messageStr")
-        from.setText("From : $fromStr")
+        previous.setText(" Previous hash : $previousStr")
+        next.setText(" Current hash : $nextStr")
+        message.setText(" Message : $messageStr")
+        from.setText(" From : $fromStr")
 
         return layoutInflater
 

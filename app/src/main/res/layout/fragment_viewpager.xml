@@ -5,6 +5,7 @@
     android:orientation="vertical">
 
     <TextView
+        android:layout_margin="16dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"

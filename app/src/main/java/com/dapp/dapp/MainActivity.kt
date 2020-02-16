@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
                 textView.setText("Share Your hash and Yo your friends")
             }
             if(position==2) {
-                textView.setText("Entire blockchain of hashes is stored in cache of every node of every phone")
+                textView.setText("Entire blockchain is stored in cache of every phone")
             }
             if(position==3) {
                 textView.setText("Edit your hash to you fried hash and Yo each other")

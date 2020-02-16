@@ -31,7 +31,9 @@ class SignUp : Fragment() {
         val editText: EditText = view.findViewById(R.id.phone)
         val signUp: Button = view.findViewById(R.id.signUp)
         signUp.setOnClickListener(View.OnClickListener {
-            viewModel.signUp(editText.text.toString())
+            if(!editText.text.toString().trim().isEmpty()) {
+                viewModel.signUp(editText.text.toString())
+            }
         })
         return view
     }
