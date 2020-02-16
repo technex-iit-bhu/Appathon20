@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/background_green">
+
+
+    <EditText
+        android:id="@+id/textDialog"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/darkgreen"
+        android:text="Masoor daal, Kadhi, Lauki, Kheera-rayta, papad, Neembu Paani" />
+
+    <Button
+        android:id="@+id/acceptButton"
+        android:layout_width="wrap_content"
+        android:layout_gravity="end"
+        android:layout_height="wrap_content"
+        android:text="Save The Changes"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@+id/textDialog"
+        android:layout_toRightOf="@+id/imageDialog"
+        />
+
+</LinearLayout>
