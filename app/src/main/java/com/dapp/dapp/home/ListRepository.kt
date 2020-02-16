@@ -23,7 +23,6 @@ class ListRepository {
                         if (string.equals(str)) {
                             val myRef = FirebaseDatabase.getInstance().getReference(snapshot.key as String)
                             myRef.setValue(block.currentHash)
-                            MainApplication.blockChain.addBlock(block)
                         }
                     }
                 }

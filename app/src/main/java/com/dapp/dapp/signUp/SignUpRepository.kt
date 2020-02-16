@@ -29,7 +29,6 @@ class SignUpRepository(@NonNull val application: Application) {
 
             }
         MainApplication.currentHash.value = block.currentHash
-        MainApplication.blockChain.addBlock(block)
         liveData.value=true
 
     }

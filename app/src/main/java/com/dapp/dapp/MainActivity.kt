@@ -65,7 +65,18 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             }
-            textView.setText("" + position)
+            if(position==0) {
+                textView.setText("A Fun Way to Visualise inner workings of blockChain")
+            }
+            if(position==1) {
+                textView.setText("Share Your hash and Yo your friends")
+            }
+            if(position==2) {
+                textView.setText("Entire blockchain of hashes is stored in cache of every node of every phone")
+            }
+            if(position==3) {
+                textView.setText("Edit your hash to you fried hash and Yo each other")
+            }
             container.addView(view)
             return view
         }

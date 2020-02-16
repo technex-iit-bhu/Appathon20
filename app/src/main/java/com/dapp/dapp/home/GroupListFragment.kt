@@ -58,10 +58,23 @@ class GroupListFragment : Fragment() {
                 }
 
                 override fun onDataChange(p0: DataSnapshot) {
-                    Toast.makeText(MainApplication.instance, "Someone just Yoed you", Toast.LENGTH_LONG).show()
-                    MainApplication.blockChain.addBlock(Block(MainApplication.currentHash.value.toString(),p0.value.toString(),"Yo!","Someone"))
-                    MainApplication.currentHash.value=p0.value.toString()
-                    PrefManager.saveString("hash",p0.value.toString())
+                    if (!MainApplication.currentHash.value.toString().equals(p0.value.toString())) {
+                        Toast.makeText(
+                            MainApplication.instance,
+                            "Someone just Yoed you",
+                            Toast.LENGTH_LONG
+                        ).show()
+                        MainApplication.blockChain.addBlock(
+                            Block(
+                                MainApplication.currentHash.value.toString(),
+                                p0.value.toString(),
+                                "Yo!",
+                                "Someone"
+                            )
+                        )
+                        MainApplication.currentHash.value = p0.value.toString()
+                        PrefManager.saveString("hash", p0.value.toString())
+                    }
                 }
 
             })
@@ -87,10 +100,10 @@ class GroupListFragment : Fragment() {
         val message: TextView = layoutInflater.findViewById(R.id.mesage)
         val from: TextView = layoutInflater.findViewById(R.id.from)
         val next: TextView = layoutInflater.findViewById(R.id.nextHash)
-        previous.setText(previousStr)
-        next.setText(nextStr)
-        message.setText(messageStr)
-        from.setText(fromStr)
+        previous.setText("Previous hash : $previousStr")
+        next.setText("Current hash : $nextStr")
+        message.setText("Message : $messageStr")
+        from.setText("From : $fromStr")
 
         return layoutInflater
 
