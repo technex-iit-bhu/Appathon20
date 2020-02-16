@@ -7,7 +7,7 @@ DApp is made with intention to covert the most basic aspects of a block and a Bl
 Single Block of DApp contains **previousHash**, **currentHash**, **Message(Yo)**, **From** where previousHash is hash of previous Block, currentHash is hash of that block, Message and from mocks the transactions details.
 
 ## How to use
--  Install the app from [here](https://google.com)
+-  Install the app from [here](https://github.com/pallav12/Appathon19/blob/master/app-debug.apk)
 -  Login with your phone number(Login Authentication in Mocked in DApp using local storage)
 -  Now, On top of your fragment something like **3423225425 Click to reset** you can see your current hash. Note: Hash function used in DApp is simple hashCode().
 -  Click on Green Yo button on bottom of fragment. If everything works fine your must be able to see a toast **Someone yoed you**
