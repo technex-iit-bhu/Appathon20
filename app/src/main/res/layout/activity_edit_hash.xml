@@ -8,14 +8,25 @@
 
     <EditText
         android:id="@+id/hash"
+        android:inputType="phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
     <Button
         android:id="@+id/submit"
+        android:text="Edit"
+        android:textAllCaps="false"
         android:layout_below="@+id/hash"
         android:layout_alignParentEnd="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true" />
+    <TextView
+        android:layout_centerInParent="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_margin="8dp"
+        android:text="Match the hash with your friends to Yo them with one click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>
