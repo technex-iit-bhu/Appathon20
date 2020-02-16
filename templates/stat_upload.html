@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %}
+Stat Upload
+{% endblock %}
+{% block main %}
+
+<section class="page-title section pb-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="text-center">
+                <h1 class="text-capitalize mb-0 text-lg">Upload your stats</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- contact form start -->
+      <section class="contact section">
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                      <form id="contact-form" class="contact__form" method="post" action="">
+                      {% csrf_token %}
+                      <div class="form-row">
+                          <div class="col-lg-12">
+                              <div class="form-group mb-3">
+                                  <label>Select Crop:</label>
+                                  <select class="form-control" name="crop">
+                                    {% for crop in crops %}  
+                                    <option value="{{crop.id}}">{{crop.name}}</option>
+                                    {% endfor %}
+                                </select>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="number" name="area" class="form-control" placeholder="cultivated area"> 
+                              </div>
+                              <div class="form-group mb-3">
+                                    <input type="number" name="investment" class="form-control" placeholder="Investment">
+                              </div>
+                              <div class="form-group mb-3">
+                                    <input type="number" name="profit" class="form-control" placeholder="Profit">
+                              </div>
+                              <div class="form-group mb-3">
+                                  <input type="number" name="expectation" class="form-control" placeholder="Yield Expectation">
+                              </div>
+                              <div class="form-group mb-3">
+                                    <input type="number" name="actual" class="form-control" placeholder="Yield Actual">
+                            </div>
+                            <div class="form-group mb-3">
+                                    <input type="number" name="wasted" class="form-control" placeholder="Yield Wasted">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input  type="number" name="pesticides" class="form-control" placeholder="Amount of pesticides used">
+                            </div>
+                          </div>
+                          <div class="col-lg-12">
+      
+                              <div class="text-center">
+                                  <button class="btn btn-main" name="submit" type="submit">Submit</button>
+                              </div>
+                          </div>
+                      </div>
+                  </form>
+                  </div>  
+              </div>
+          </div>
+      </section>
+      
+{% endblock %}
