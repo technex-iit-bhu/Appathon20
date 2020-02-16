@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% include static %}
+{% block main %}
+
+<section class="section blog-post">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<article class="single-post">
+
+	<div class="single-post-content mt-4">
+		<div class="post-meta mb-4">
+			<span class="text-black">Tags :</span>
+			<span>{{ ques.tags|join:"</span>, <span>" }}</span>
+
+			<span class="ml-3">-</span>
+			<span class="date">{{ ques.asked }}</span>
+		</div>
+		
+		<h3>{{ ques.title }}</h3>
+
+		<p>{{ ques.content }}</p>
+	</div>
+</article>
+
+<div class="comments bg-secondary p-4 mt-5">
+	<h4 class="mb-4">Answers</h4>
+
+	<div class="latest-comments">
+		<ul class="list-unstyled">
+			{% for ans in answers %}
+			<li>
+				<div class="media comments-box mb-45">
+					<img src="https://via.placeholder.com/75" alt="" class="img-fluid mr-3">
+					<div class="comments-text media-body">
+						<h5>{{ ans.farmer.name }}</h5>
+						<p>{{ ans.content }}</p>
+					</div>
+					{{ ans.answered }}
+				</div>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+
+<div class="comment-form bg-secondary p-4 mt-5">
+	<h4 class="mb-4">Submit an answer</h4>
+	<form method="POST" class="comment-form">
+		{% csrf_token %}
+		<div class="form-group">
+			<textarea name="content" id="content" cols="30" rows="4" class="form-control" placeholder="Your Answer"></textarea>
+		</div>
+
+		<input type="submit" class="btn btn-main" value="Post Answer" />
+		
+	</form>
+</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="sidebar-widget mt-5 mt-lg-0">
+
+	<div class="widget mb-5 tags">
+		<h4 class="mb-4 widget-title">Tags</h4>
+		<ul class="list-inline">
+			{% for tag in tags %}
+			<li class="list-inline-item"><a href="#">{{ tag }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+
+</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}

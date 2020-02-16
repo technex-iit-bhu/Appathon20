@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+AgriConnect | Portal
+{% endblock %}
+{% block main %}
+<!-- Navigation ENd -->
+
+<!-- Banner start -->
+<section class="section banner-3">
+	<div class="container">
+		<div class="row justify-content-center align-items-center">
+			<div class="col-lg-6">
+                <!-- <div class="row"> -->
+                <span class="text-black" style="font-size: xx-large">{{equipment.name}}</span>
+                <span style="float:right;font-size:xx-large">Rs. {{equipment.rental_price}}</span>
+                <!-- </div> --><br>
+				<span class="text-black">By:  </span><span class="lead mb-4">{{equipment.farmer.name}}</p>
+
+				<p class="mb-4">{{equipment.description}}</p>
+
+				
+				<img src="images/signature.png" alt="" class="img-fluid">
+			</div>
+
+			<div class="col-lg-4">
+				<ul class="list-unstyled mt-3 mb-5 about-list">
+					<li><span class="text-black">Category - </span><span style="color:gray;">{{equipment.label_category}}</span></li>
+					<li><span class="text-black">Start Date - </span><span style="color:gray;">{{equipment.start_dt | date}}</span></li>
+					<li><span class="text-black">End Date - </span><span style="color:gray;">{{equipment.end_dt | date}}</span></li>
+					<li><span class="text-black">Contact - <button class="btn btn-main btn-xs" onclick="newChat({{ equipment.farmer.id }})">Chat</button></li> 
+                </ul>
+            </div>
+            <div class="col-lg-2">
+                <img src="https://via.placeholder.com/200" style="overflow: hidden;max-width: 100%;margin-top:-20px;">
+            </div>
+		</div>
+	</div>
+</section>
+
+<script>
+function newChat(farmer_id) {
+	$.post({
+		url: `/chats/new/farmers/${farmer_id}/`,
+		data: {
+			'message': 'I want to buy {{equipment.name}}'
+		}
+	})
+}
+</script>
+
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Predictive Analysis
+{% endblock %}
+{% block main %}
+<center>
+<div id="chartContainer" style="height: 400px; width: 60%;"></div>
+</center>
+{% endblock %}
+{% block somethingelse %}
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script>
+    actual_data = "{{ actual_result }}".split(",")
+    actual = []
+    for (let i = 0; i < actual_data.length - 10; i++) {
+        actual[i] = {x: i+1, y: Math.round(actual_data[i])}
+    }
+    predicted = []
+    window.onload = function () {
+        $.ajax({
+            url:"https://5ln9hmjwfc.execute-api.us-east-1.amazonaws.com/prod/price-predict",
+            type:"POST",
+            crossDomain:true,
+            contentType:"application/json",
+            dataType: "json",
+            data: JSON.stringify({
+                data: "{{ past_data }}"
+            }),
+            success:function(data,status,xhr){
+                console.log(data);
+                data = data['predictions']
+                for (let i = 0; i < data.length; i++) {
+                    predicted[i] = {x: i+1, y: data[i]['score']}
+                }
+                chart.render();
+            },
+            error:function(xhr,status,err){
+                console.log(xhr);
+                console.log(err);
+            },
+            complete:function(xhr,status){
+                console.log(xhr);
+            }
+        });
+        
+        chart = new CanvasJS.Chart("chartContainer", {
+            title: {
+                text: "Predictive Analysis of Wheat"
+            },
+            toolTip: {
+                shared: true
+            },
+            legend: {
+                cursor: "pointer",
+                verticalAlign: "top",
+                horizontalAlign: "center",
+                dockInsidePlotArea: true,
+                itemclick: toogleDataSeries
+            },
+            axisX:{
+                title:"Time",
+            },
+            axisY: {
+                title:"Price",
+                prefix: "Rs. ",
+                includeZero: false
+            },
+            data: [
+                {
+                    type:"line",
+                    showInLegend: true,
+                    markerSize: 0,
+                    name:"Actual",
+                    dataPoints: actual
+                },
+                {
+                    type:"line",
+                    showInLegend: true,
+                    markerSize: 0,
+                    name:"predicted",
+                    dataPoints: predicted
+                }
+            ]
+        });
+        
+        function toogleDataSeries(e){
+            if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                e.dataSeries.visible = false;
+            } else{
+                e.dataSeries.visible = true;
+            }
+            chart.render();
+        }
+    }
+    </script>
+{% endblock %}

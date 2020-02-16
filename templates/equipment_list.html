@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+<section class="page-title section pb-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="text-center">
+                <h1 class="text-capitalize mb-0 text-lg">Equipment Catalogue</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section blog-post">
+          <div class="container">
+              <div class="row">
+                {% for equipment in equipments %}
+                  <div class="col-lg-4 col-md-6">
+                    <div class="post mb-5">
+                        <a class="image-content" href="{% url 'equipment-detail' equipment.pk %}">
+                            <img src="https://picsum.photos/300" alt="" class="img-fluid">
+                        </a>
+                
+                        <div class="post-content">
+                            <span class="date text-uppercase text-sm">{{equipment.start_dt | date}} - {{equipment.end_dt | date}}</span>
+                            <a href="blog-single.html"><h4>{{equipment.name}} for Rs. {{equipment.rental_price}}</h4></a>
+                        </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+              </div>
+          </div>
+      </section>
+      
+{% endblock %}
