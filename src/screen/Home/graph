@@ -1,0 +1,115 @@
+import React, { Component } from "react";
+import { Layout } from "@ui-kitten/components";
+import {
+  VictoryLine,
+  VictoryChart,
+  VictoryTheme,
+  VictoryGroup
+} from "victory-native";
+import Card from "../../components/Card/Index";
+class Graph extends Component {
+  constructor() {
+    super();
+    this.state = {
+      data: [],
+      loading: true,
+      message: ""
+    };
+  }
+  componentDidMount(){
+    this.GraphData("graph");
+  }
+
+  GraphData(key) {
+    AsyncStorage.getItem(key, (error, result) => {
+      if (error) {
+        Alert("Graph data get item error Line number 26");
+      } else {
+        if (result !== null) {
+          result = JSON.parse(result);
+          if (false) {
+            alert("date Match Set to state");
+            var graphData = this.state.data.concat(result);
+            this.setState({ loading: false, data: graphData });
+            alert("set to State Complete");
+          } else {
+            alert("Fetching Today data");
+            fetch("https://dash-cash-ml.herokuapp.com/?user_id=suraj&run=2")
+              .then(response => response.json())
+              .then(responseJson => {
+                result.push(responseJson);
+                this.saveData(key, result);
+                alert("data fetching complete and saving");
+              })
+              .catch(error => {
+                alert(error);
+                // alert("error open when fetch data");
+                // alert("error in getting graph data");
+              });
+          }
+        } else {
+          alert("first time data fetch");
+          fetch("https://dash-cash-ml.herokuapp.com/?user_id=suraj&run=2")
+            .then(response => response.json())
+            .then(responseJson => {
+              alert("firsst time data recive");
+              const value = [];
+              value.push(responseJson);
+              this.saveData(key, value);
+            })
+            .catch(error => {
+              alert("first time data fetch fails");
+              // alert("error in getting graph data");
+            });
+        }
+      }
+    });
+  }
+  saveData(key, data) {
+    // alert(JSON.stringify(data));
+    AsyncStorage.setItem(key, JSON.stringify(data)).then(() => {
+      AsyncStorage.getItem(key, (error, result) => {
+        if (error) {
+          alert(error);
+        } else {
+          result = JSON.parse(result);
+          this.setState({ data: result, loading: false });
+        }
+      });
+    });
+  }
+  render() {
+    const { itemWidth } = this.props;
+    const data = [
+      { quarter: 0, earnings: 0 },
+      { quarter: 1, earnings: 2 },
+      { quarter: 2, earnings: 3 },
+      { quarter: 3, earnings: 1 },
+      { quarter: 4, earnings: 2 }
+    ];
+    const data2 = [
+      { quarter: 0, earnings: 0 },
+      { quarter: 1, earnings: 1 },
+      { quarter: 2, earnings: 2 },
+      { quarter: 3, earnings: 4 },
+      { quarter: 4, earnings: 3 }
+    ];
+    return (
+      <Card headername={"Graph"} headericon={"hash-outline"}>
+        <Layout>
+          <VictoryChart
+            // domainPadding={{ x: 40 }}
+            width={itemWidth}
+            theme={VictoryTheme.material}
+          >
+            <VictoryGroup colorScale={"qualitative"}>
+              <VictoryLine data={data} x="quarter" y="earnings" />
+              <VictoryLine data={data2} x="quarter" y="earnings" />
+            </VictoryGroup>
+          </VictoryChart>
+        </Layout>
+      </Card>
+    );
+  }
+}
+export default Graph;
